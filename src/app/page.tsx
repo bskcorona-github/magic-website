@@ -6,6 +6,7 @@ import { HeroSection } from "@/components/ui/hero-odyssey";
 import { FeaturesSection } from "@/components/ui/features-section";
 import { AboutSection } from "@/components/ui/about-section";
 import { CTASection } from "@/components/ui/cta-section";
+import { Navigation } from "@/components/ui/navigation";
 import MatrixRain from "@/components/ui/matrix-code";
 
 export default function HomePage() {
@@ -14,6 +15,9 @@ export default function HomePage() {
 
   return (
     <div className="relative bg-black overflow-hidden">
+      {/* グローバルナビゲーション */}
+      <Navigation />
+
       {/* Matrix Code背景 - 最背面（50%透過） - 固定 */}
       <div className="fixed inset-0 z-0 opacity-50">
         <MatrixRain

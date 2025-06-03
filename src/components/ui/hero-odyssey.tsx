@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 
 interface ElasticHueSliderProps {
   value: number;
@@ -341,9 +340,7 @@ const FeatureItem: React.FC<FeatureItemProps> = ({ name, value, position }) => {
 };
 
 export const HeroSection: React.FC = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  // State for the lightning hue
-  const [lightningHue, setLightningHue] = useState(220); // Default hue
+  const [lightningHue, setLightningHue] = useState(220);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -371,152 +368,7 @@ export const HeroSection: React.FC = () => {
   return (
     <div className="relative w-full bg-transparent text-white overflow-hidden">
       {/* Main container with space for content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 h-screen">
-        {/* Navigation */}
-        <motion.div
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="px-4 backdrop-blur-xl bg-black/20 rounded-50 py-4 flex justify-between items-center mb-12"
-        >
-          <div className="flex items-center">
-            <div className="text-2xl font-bold">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <path
-                  d="M20 5L5 20L20 35L35 20L20 5Z"
-                  stroke="white"
-                  strokeWidth="2"
-                />
-              </svg>
-            </div>
-            <div className="hidden md:flex items-center space-x-6 ml-8">
-              <Link
-                href="/"
-                className="px-4 py-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-full text-sm transition-colors"
-              >
-                ホーム
-              </Link>
-              <Link
-                href="/features"
-                className="px-4 py-2 text-sm hover:text-gray-300 transition-colors"
-              >
-                機能
-              </Link>
-              <Link
-                href="/contact"
-                className="px-4 py-2 text-sm hover:text-gray-300 transition-colors"
-              >
-                お問い合わせ
-              </Link>
-              <Link
-                href="/support"
-                className="px-4 py-2 text-sm hover:text-gray-300 transition-colors"
-              >
-                サポート
-              </Link>
-              <Link
-                href="/docs"
-                className="px-4 py-2 text-sm hover:text-gray-300 transition-colors"
-              >
-                ドキュメント
-              </Link>
-            </div>
-          </div>
-          <div className="flex items-center space-x-4">
-            <button className="hidden md:block px-4 py-2 text-sm hover:text-gray-300 transition-colors">
-              登録
-            </button>
-            <button className="px-4 py-2 bg-gray-800/80 backdrop-blur-sm rounded-full text-sm hover:bg-gray-700/80 transition-colors">
-              アプリを試す
-            </button>
-            {/* Mobile menu button */}
-            <button
-              className="md:hidden p-2 rounded-md focus:outline-none"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? (
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              )}
-            </button>
-          </div>
-        </motion.div>
-
-        {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="md:hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-lg z-9999"
-          >
-            <div className="flex flex-col items-center justify-center h-full space-y-6 text-lg">
-              <button
-                className="absolute top-6 right-6 p-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-              <Link href="/" className="px-6 py-3 bg-gray-800/50 rounded-full">
-                ホーム
-              </Link>
-              <Link href="/features" className="px-6 py-3">
-                機能
-              </Link>
-              <Link href="/contact" className="px-6 py-3">
-                お問い合わせ
-              </Link>
-              <Link href="/support" className="px-6 py-3">
-                サポート
-              </Link>
-              <Link href="/docs" className="px-6 py-3">
-                ドキュメント
-              </Link>
-              <button className="px-6 py-3">登録</button>
-              <button className="px-6 py-3 bg-gray-800/80 backdrop-blur-sm rounded-full">
-                アプリを試す
-              </button>
-            </div>
-          </motion.div>
-        )}
-
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 h-screen pt-24">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -560,7 +412,6 @@ export const HeroSection: React.FC = () => {
           animate="visible"
           className="relative z-30 flex flex-col items-center text-center max-w-4xl mx-auto "
         >
-          {" "}
           <ElasticHueSlider
             value={lightningHue}
             onChange={setLightningHue}
@@ -571,7 +422,7 @@ export const HeroSection: React.FC = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center space-x-2 px-4 py-2 bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-full text-sm mb-6 transition-all duration-300 group" // Reduced mb slightly
+            className="flex items-center space-x-2 px-4 py-2 bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-full text-sm mb-6 transition-all duration-300 group"
           >
             <span>今すぐ体験を開始</span>
             <svg

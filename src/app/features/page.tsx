@@ -3,31 +3,15 @@
 import React from "react";
 import { InteractiveRobotSpline } from "@/components/ui/interactive-3d-robot";
 import { FeaturesSection } from "@/components/ui/features-section";
+import { Navigation } from "@/components/ui/navigation";
 import MatrixRain from "@/components/ui/matrix-code";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { ArrowLeft, CheckCircle } from "lucide-react";
-import Link from "next/link";
+import { CheckCircle } from "lucide-react";
 
 const FeaturesHero = () => {
   return (
-    <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 h-screen flex flex-col justify-center">
-      {/* ナビゲーション */}
-      <motion.div
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="absolute top-6 left-4 sm:left-6 lg:left-8"
-      >
-        <Link
-          href="/"
-          className="flex items-center gap-2 px-4 py-2 backdrop-blur-xl bg-black/20 rounded-full text-white hover:bg-black/30 transition-colors"
-        >
-          <ArrowLeft className="size-4" />
-          <span>ホームに戻る</span>
-        </Link>
-      </motion.div>
-
+    <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 h-screen flex flex-col justify-center pt-24">
       {/* メインコンテンツ */}
       <motion.div
         initial={{ y: 50, opacity: 0 }}
@@ -78,6 +62,9 @@ export default function FeaturesPage() {
 
   return (
     <div className="relative bg-black overflow-hidden">
+      {/* グローバルナビゲーション */}
+      <Navigation />
+
       {/* Matrix Code背景 - 最背面（50%透過） - 固定 */}
       <div className="fixed inset-0 z-0 opacity-50">
         <MatrixRain
