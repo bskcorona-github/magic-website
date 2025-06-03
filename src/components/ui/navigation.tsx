@@ -14,6 +14,8 @@ export const Navigation: React.FC = () => {
   const navItems = [
     { href: "/", label: "ホーム" },
     { href: "/features", label: "機能" },
+    { href: "/dashboard", label: "ダッシュボード" },
+    { href: "/use-cases", label: "ユースケース" },
     { href: "/contact", label: "お問い合わせ" },
     { href: "/support", label: "サポート" },
     { href: "/docs", label: "ドキュメント" },

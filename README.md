@@ -1,14 +1,26 @@
-# Magic Website ✨
+# Magic MCP Website ✨
 
-> 未来的なデザインと 3D インタラクションを組み合わせた革新的なウェブサイト
+> **Model Context Protocol (MCP)** の実装プラットフォーム - 未来的なデザインと 3D インタラクションを組み合わせた革新的なウェブサイト
 
 ## 🌟 特徴
 
-このプロジェクトは、3 つの美しいレイヤーで構成された没入感のあるウェブ体験を提供します：
+このプロジェクトは、Magic MCP（Model Context Protocol）の公式ウェブサイトで、3 つの美しいレイヤーで構成された没入感のあるウェブ体験を提供します：
 
 - **🔢 Matrix Code Background**: 50%透過のマトリックスレインアニメーション
 - **🤖 3D Interactive Robot**: Spline で作成されたインタラクティブな 3D ロボット「Whobee」
 - **⚡ Hero Odyssey Interface**: ライトニングエフェクトと洗練された UI
+
+## 📱 ページ構成
+
+### 主要ページ
+
+- **🏠 ホーム**: Magic MCP プラットフォームの概要とヒーローセクション
+- **⚙️ 機能**: MCP の技術仕様と主要機能の詳細
+- **📊 ダッシュボード**: MCP サーバーのリアルタイム監視と管理
+- **💼 ユースケース**: Magic MCP を活用した実際の統合パターンと事例
+- **📞 お問い合わせ**: コンタクトフォームと連絡先情報
+- **🆘 サポート**: FAQ とサポートリソース
+- **📚 ドキュメント**: 技術ドキュメントと API リファレンス
 
 ## 🚀 技術スタック
 
@@ -19,6 +31,7 @@
 - **Animations**: Framer Motion
 - **3D Graphics**: Spline (@splinetool/react-spline)
 - **Effects**: WebGL Shaders
+- **Icons**: Lucide React
 
 ## 🎨 デザイン要素
 
@@ -26,7 +39,7 @@
 
 ```
 Layer 3: Hero Odyssey (前面)
-├── ナビゲーション
+├── グローバルナビゲーション
 ├── ライトニングエフェクト (WebGL)
 ├── インタラクティブUI要素
 └── カスタマイズ可能な色調整
@@ -71,17 +84,29 @@ npm run dev
 magic-website/
 ├── src/
 │   ├── app/
-│   │   ├── globals.css          # カスタムスタイル
-│   │   └── page.tsx             # メインページ
+│   │   ├── page.tsx                # ホームページ
+│   │   ├── features/               # 機能ページ
+│   │   ├── dashboard/              # ダッシュボードページ
+│   │   ├── use-cases/              # ユースケースページ
+│   │   ├── contact/                # お問い合わせページ
+│   │   ├── support/                # サポートページ
+│   │   ├── docs/                   # ドキュメントページ
+│   │   ├── sitemap.ts              # SEO サイトマップ
+│   │   ├── layout.tsx              # グローバルレイアウト
+│   │   └── globals.css             # カスタムスタイル
 │   ├── components/
 │   │   └── ui/
-│   │       ├── hero-odyssey.tsx     # Hero Odysseyコンポーネント
+│   │       ├── navigation.tsx          # グローバルナビゲーション
+│   │       ├── hero-odyssey.tsx        # Hero Odysseyコンポーネント
 │   │       ├── interactive-3d-robot.tsx # 3Dロボットコンポーネント
-│   │       ├── matrix-code.tsx      # Matrix Rainコンポーネント
-│   │       └── card.tsx             # shadcn/uiカードコンポーネント
+│   │       ├── matrix-code.tsx         # Matrix Rainコンポーネント
+│   │       ├── features-section.tsx    # 機能セクション
+│   │       ├── about-section.tsx       # Aboutセクション
+│   │       ├── cta-section.tsx         # CTAセクション
+│   │       └── card.tsx                # shadcn/uiカードコンポーネント
 │   └── lib/
-│       └── utils.ts             # ユーティリティ関数
-├── components.json              # shadcn/ui設定
+│       └── utils.ts                # ユーティリティ関数
+├── components.json                 # shadcn/ui設定
 └── package.json
 ```
 
@@ -90,7 +115,39 @@ magic-website/
 - **🎨 ライトニング色調整**: リアルタイムでライトニングエフェクトの色を変更
 - **🤖 3D ロボット操作**: マウスやタッチでロボットと相互作用
 - **📱 レスポンシブデザイン**: モバイル・タブレット・デスクトップ対応
-- **🌈 アニメーション**: 滑らかな Freamer Motion アニメーション
+- **🌈 アニメーション**: 滑らかな Framer Motion アニメーション
+- **🧭 アクティブナビゲーション**: 現在のページをハイライト表示
+
+## 🔧 Magic MCP について
+
+**Model Context Protocol (MCP)** は Anthropic が開発したオープンスタンダードで、AI システムとデータソースを接続するためのプロトコルです。
+
+### 主な利点
+
+- **統一されたインターフェース**: 複数のデータソースを標準化された API で接続
+- **リアルタイム統合**: AI モデルが最新のコンテキスト情報にアクセス
+- **セキュアな接続**: 安全な双方向通信を実現
+- **スケーラブルなアーキテクチャ**: エンタープライズレベルの統合に対応
+
+## 📊 ダッシュボード機能
+
+新しく追加されたダッシュボードページでは：
+
+- **リアルタイム監視**: MCP サーバーの状態とパフォーマンス
+- **サーバー管理**: 複数の MCP サーバーインスタンスの管理
+- **ログ監視**: リアルタイムログストリーミング
+- **クイックアクション**: サーバーの開始・停止・再起動
+
+## 💼 ユースケース
+
+実装済みのユースケース例：
+
+- **企業内チャットボット**: Slack/Teams 統合
+- **コード解析システム**: GitHub 連携自動レビュー
+- **データ分析ダッシュボード**: BI 統合
+- **ドキュメント検索**: ナレッジベース管理
+- **クラウドリソース管理**: AWS/Azure/GCP 統合
+- **セキュリティ監査**: 脅威検出とコンプライアンス
 
 ## 🛡️ デプロイ
 
@@ -107,6 +164,14 @@ vercel
 - AWS Amplify
 - GitHub Pages
 
+## 🔍 SEO 最適化
+
+- ✅ 構造化データ (JSON-LD)
+- ✅ Open Graph メタタグ
+- ✅ Twitter Card 対応
+- ✅ サイトマップ自動生成
+- ✅ 適切な meta タグ設定
+
 ## 🤝 コントリビューション
 
 1. このリポジトリをフォーク
@@ -121,6 +186,7 @@ vercel
 
 ## 🙏 謝辞
 
+- **Anthropic**: Model Context Protocol の開発
 - **Spline**: 素晴らしい 3D デザインツール
 - **21st.dev**: Hero Odyssey と Matrix Code コンポーネント
 - **shadcn/ui**: 美しい UI コンポーネントライブラリ
@@ -128,4 +194,4 @@ vercel
 
 ---
 
-✨ **Magic Website** - 未来を照らす技術で創造された体験 ✨
+✨ **Magic MCP** - AI と未来をつなぐテクノロジープラットフォーム ✨
