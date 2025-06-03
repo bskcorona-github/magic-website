@@ -303,3 +303,14 @@
     }
   }
 }
+
+/* Splineウォーターマークを非表示 */
+.spline-watermark {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+[data-spline-uikit-text-container] {
+  display: none !important;
+}
