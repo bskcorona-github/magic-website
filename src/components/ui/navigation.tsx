@@ -62,16 +62,8 @@ export const Navigation: React.FC = () => {
             </div>
           </div>
 
-          {/* 右側アクション */}
-          <div className="flex items-center space-x-4">
-            <button className="hidden md:block px-4 py-2 text-sm hover:text-gray-300 transition-colors">
-              登録
-            </button>
-            <button className="px-4 py-2 bg-gray-800/80 backdrop-blur-sm rounded-full text-sm hover:bg-gray-700/80 transition-colors">
-              アプリを試す
-            </button>
-
-            {/* モバイルメニューボタン */}
+          {/* モバイルメニューボタン */}
+          <div className="flex items-center">
             <button
               className="md:hidden p-2 rounded-md focus:outline-none"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -152,13 +144,6 @@ export const Navigation: React.FC = () => {
                 {item.label}
               </Link>
             ))}
-
-            <button className="px-6 py-3 text-gray-300 hover:text-white transition-colors">
-              登録
-            </button>
-            <button className="px-6 py-3 bg-gray-800/80 backdrop-blur-sm rounded-full hover:bg-gray-700/80 transition-colors">
-              アプリを試す
-            </button>
           </div>
         </motion.div>
       )}
