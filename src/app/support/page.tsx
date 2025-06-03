@@ -7,13 +7,11 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   ArrowLeft,
-  HelpCircle,
   Book,
   MessageCircle,
   Clock,
   ChevronDown,
   ChevronUp,
-  Search,
   ExternalLink,
 } from "lucide-react";
 import Link from "next/link";
