@@ -1,36 +1,131 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Magic Website ✨
 
-## Getting Started
+> 未来的なデザインと 3D インタラクションを組み合わせた革新的なウェブサイト
 
-First, run the development server:
+## 🌟 特徴
+
+このプロジェクトは、3 つの美しいレイヤーで構成された没入感のあるウェブ体験を提供します：
+
+- **🔢 Matrix Code Background**: 50%透過のマトリックスレインアニメーション
+- **🤖 3D Interactive Robot**: Spline で作成されたインタラクティブな 3D ロボット「Whobee」
+- **⚡ Hero Odyssey Interface**: ライトニングエフェクトと洗練された UI
+
+## 🚀 技術スタック
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **UI Components**: shadcn/ui
+- **Animations**: Framer Motion
+- **3D Graphics**: Spline (@splinetool/react-spline)
+- **Effects**: WebGL Shaders
+
+## 🎨 デザイン要素
+
+### Layer Structure
+
+```
+Layer 3: Hero Odyssey (前面)
+├── ナビゲーション
+├── ライトニングエフェクト (WebGL)
+├── インタラクティブUI要素
+└── カスタマイズ可能な色調整
+
+Layer 2: 3D Robot (中間層)
+├── インタラクティブ3Dロボット
+├── リアルタイム操作
+└── Spline統合
+
+Layer 1: Matrix Code (背景)
+├── バイナリー & 日本語文字
+├── 50%透過アニメーション
+└── カスタマイズ可能な速度
+```
+
+## 🛠️ セットアップ
+
+### 前提条件
+
+- Node.js 18+
+- npm または yarn
+
+### インストール
+
+```bash
+git clone <repository-url>
+cd magic-website
+npm install
+```
+
+### 開発サーバー起動
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで [http://localhost:3000](http://localhost:3000) を開いて確認してください。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 プロジェクト構造
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+magic-website/
+├── src/
+│   ├── app/
+│   │   ├── globals.css          # カスタムスタイル
+│   │   └── page.tsx             # メインページ
+│   ├── components/
+│   │   └── ui/
+│   │       ├── hero-odyssey.tsx     # Hero Odysseyコンポーネント
+│   │       ├── interactive-3d-robot.tsx # 3Dロボットコンポーネント
+│   │       ├── matrix-code.tsx      # Matrix Rainコンポーネント
+│   │       └── card.tsx             # shadcn/uiカードコンポーネント
+│   └── lib/
+│       └── utils.ts             # ユーティリティ関数
+├── components.json              # shadcn/ui設定
+└── package.json
+```
 
-## Learn More
+## 🎮 インタラクティブ機能
 
-To learn more about Next.js, take a look at the following resources:
+- **🎨 ライトニング色調整**: リアルタイムでライトニングエフェクトの色を変更
+- **🤖 3D ロボット操作**: マウスやタッチでロボットと相互作用
+- **📱 レスポンシブデザイン**: モバイル・タブレット・デスクトップ対応
+- **🌈 アニメーション**: 滑らかな Freamer Motion アニメーション
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛡️ デプロイ
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Vercel (推奨)
 
-## Deploy on Vercel
+```bash
+npm install -g vercel
+vercel
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### その他のプラットフォーム
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Netlify
+- AWS Amplify
+- GitHub Pages
+
+## 🤝 コントリビューション
+
+1. このリポジトリをフォーク
+2. 機能ブランチを作成 (`git checkout -b feature/amazing-feature`)
+3. 変更をコミット (`git commit -m 'Add amazing feature'`)
+4. ブランチにプッシュ (`git push origin feature/amazing-feature`)
+5. プルリクエストを作成
+
+## 📄 ライセンス
+
+このプロジェクトは MIT ライセンスの下で公開されています。詳細は [LICENSE](LICENSE) ファイルを参照してください。
+
+## 🙏 謝辞
+
+- **Spline**: 素晴らしい 3D デザインツール
+- **21st.dev**: Hero Odyssey と Matrix Code コンポーネント
+- **shadcn/ui**: 美しい UI コンポーネントライブラリ
+- **Vercel**: Next.js の開発チーム
+
+---
+
+✨ **Magic Website** - 未来を照らす技術で創造された体験 ✨
