@@ -390,28 +390,28 @@ export const HeroSection: React.FC = () => {
             </div>
             <div className="hidden md:flex items-center space-x-6 ml-8">
               <button className="px-4 py-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-full text-sm transition-colors">
-                Start
+                ホーム
               </button>
               <button className="px-4 py-2 text-sm hover:text-gray-300 transition-colors">
-                Home
+                機能
               </button>
               <button className="px-4 py-2 text-sm hover:text-gray-300 transition-colors">
-                Contacts
+                お問い合わせ
               </button>
               <button className="px-4 py-2 text-sm hover:text-gray-300 transition-colors">
-                Help
+                サポート
               </button>
               <button className="px-4 py-2 text-sm hover:text-gray-300 transition-colors">
-                Docs
+                ドキュメント
               </button>
             </div>
           </div>
           <div className="flex items-center space-x-4">
             <button className="hidden md:block px-4 py-2 text-sm hover:text-gray-300 transition-colors">
-              Register
+              登録
             </button>
             <button className="px-4 py-2 bg-gray-800/80 backdrop-blur-sm rounded-full text-sm hover:bg-gray-700/80 transition-colors">
-              Application
+              アプリを試す
             </button>
             {/* Mobile menu button */}
             <button
@@ -479,15 +479,15 @@ export const HeroSection: React.FC = () => {
                 </svg>
               </button>
               <button className="px-6 py-3 bg-gray-800/50 rounded-full">
-                Start
+                ホーム
               </button>
-              <button className="px-6 py-3">Home</button>
-              <button className="px-6 py-3">Contacts</button>
-              <button className="px-6 py-3">Help</button>
-              <button className="px-6 py-3">Docs</button>
-              <button className="px-6 py-3">Register</button>
+              <button className="px-6 py-3">機能</button>
+              <button className="px-6 py-3">お問い合わせ</button>
+              <button className="px-6 py-3">サポート</button>
+              <button className="px-6 py-3">ドキュメント</button>
+              <button className="px-6 py-3">登録</button>
               <button className="px-6 py-3 bg-gray-800/80 backdrop-blur-sm rounded-full">
-                Application
+                アプリを試す
               </button>
             </div>
           </motion.div>
@@ -502,28 +502,28 @@ export const HeroSection: React.FC = () => {
           <motion.div variants={itemVariants}>
             <FeatureItem
               name="React"
-              value="for base"
+              value="フレームワーク"
               position="left-0 sm:left-10 top-40"
             />
           </motion.div>
           <motion.div variants={itemVariants}>
             <FeatureItem
               name="Tailwind"
-              value="for styles"
+              value="スタイリング"
               position="left-1/4 top-24"
             />
           </motion.div>
           <motion.div variants={itemVariants}>
             <FeatureItem
-              name="Framer-motion"
-              value="for animations"
+              name="Framer Motion"
+              value="アニメーション"
               position="right-1/4 top-24"
             />
           </motion.div>
           <motion.div variants={itemVariants}>
             <FeatureItem
-              name="Shaders"
-              value="for lightning"
+              name="WebGL"
+              value="3Dエフェクト"
               position="right-0 sm:right-10 top-40"
             />
           </motion.div>
@@ -540,7 +540,7 @@ export const HeroSection: React.FC = () => {
           <ElasticHueSlider
             value={lightningHue}
             onChange={setLightningHue}
-            label="Adjust Lightning Hue"
+            label="ライトニングの色調整"
           />
           {/* Button: "Join us for free world" */}
           <motion.button
@@ -549,7 +549,7 @@ export const HeroSection: React.FC = () => {
             whileTap={{ scale: 0.95 }}
             className="flex items-center space-x-2 px-4 py-2 bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-full text-sm mb-6 transition-all duration-300 group" // Reduced mb slightly
           >
-            <span>Join us for free world</span>
+            <span>今すぐ体験を開始</span>
             <svg
               width="16"
               height="16"
@@ -570,21 +570,22 @@ export const HeroSection: React.FC = () => {
             variants={itemVariants}
             className="text-5xl md:text-7xl font-light mb-2"
           >
-            Hero Odyssey
+            Magic MCP
           </motion.h1>
           <motion.h2
             variants={itemVariants}
             className="text-3xl md:text-5xl pb-3 font-light bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 bg-clip-text text-transparent"
           >
-            Lighting Up The Future
+            未来へのインタラクション
           </motion.h2>
           {/* Description */}
           <motion.p
             variants={itemVariants}
             className="text-gray-400 mb-9 max-w-2xl"
           >
-            Lightning animation is 100% code generated, so fill free to
-            customize it to your liking.
+            3Dロボット、WebGLライトニング、マトリックスコードが融合した
+            <br />
+            インタラクティブな次世代Webエクスペリエンス
           </motion.p>
           <motion.button
             variants={itemVariants}
@@ -592,7 +593,7 @@ export const HeroSection: React.FC = () => {
             whileTap={{ scale: 0.95 }}
             className="mt-[100px] sm:mt-[100px] px-8 py-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors"
           >
-            Discover Those Worlds
+            体験を始める
           </motion.button>
         </motion.div>
       </div>
