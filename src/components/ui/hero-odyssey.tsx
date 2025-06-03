@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 interface ElasticHueSliderProps {
   value: number;
@@ -389,21 +390,36 @@ export const HeroSection: React.FC = () => {
               </svg>
             </div>
             <div className="hidden md:flex items-center space-x-6 ml-8">
-              <button className="px-4 py-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-full text-sm transition-colors">
+              <Link
+                href="/"
+                className="px-4 py-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-full text-sm transition-colors"
+              >
                 ホーム
-              </button>
-              <button className="px-4 py-2 text-sm hover:text-gray-300 transition-colors">
+              </Link>
+              <Link
+                href="/features"
+                className="px-4 py-2 text-sm hover:text-gray-300 transition-colors"
+              >
                 機能
-              </button>
-              <button className="px-4 py-2 text-sm hover:text-gray-300 transition-colors">
+              </Link>
+              <Link
+                href="/contact"
+                className="px-4 py-2 text-sm hover:text-gray-300 transition-colors"
+              >
                 お問い合わせ
-              </button>
-              <button className="px-4 py-2 text-sm hover:text-gray-300 transition-colors">
+              </Link>
+              <Link
+                href="/support"
+                className="px-4 py-2 text-sm hover:text-gray-300 transition-colors"
+              >
                 サポート
-              </button>
-              <button className="px-4 py-2 text-sm hover:text-gray-300 transition-colors">
+              </Link>
+              <Link
+                href="/docs"
+                className="px-4 py-2 text-sm hover:text-gray-300 transition-colors"
+              >
                 ドキュメント
-              </button>
+              </Link>
             </div>
           </div>
           <div className="flex items-center space-x-4">
@@ -478,13 +494,21 @@ export const HeroSection: React.FC = () => {
                   />
                 </svg>
               </button>
-              <button className="px-6 py-3 bg-gray-800/50 rounded-full">
+              <Link href="/" className="px-6 py-3 bg-gray-800/50 rounded-full">
                 ホーム
-              </button>
-              <button className="px-6 py-3">機能</button>
-              <button className="px-6 py-3">お問い合わせ</button>
-              <button className="px-6 py-3">サポート</button>
-              <button className="px-6 py-3">ドキュメント</button>
+              </Link>
+              <Link href="/features" className="px-6 py-3">
+                機能
+              </Link>
+              <Link href="/contact" className="px-6 py-3">
+                お問い合わせ
+              </Link>
+              <Link href="/support" className="px-6 py-3">
+                サポート
+              </Link>
+              <Link href="/docs" className="px-6 py-3">
+                ドキュメント
+              </Link>
               <button className="px-6 py-3">登録</button>
               <button className="px-6 py-3 bg-gray-800/80 backdrop-blur-sm rounded-full">
                 アプリを試す
